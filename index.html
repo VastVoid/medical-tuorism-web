@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedKorea Travel | Медицинский туризм в Южную Корею из России</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #00a8cc;
+            --accent-color: #ff6b6b;
+            --dark-blue: #003d7a;
+            --light-blue: #e6f3ff;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray-medium: #cccccc;
+            --gray-dark: #333333;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        .top-bar {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .top-bar .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 30px;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--accent-color);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M0,0 L1000,0 L1000,1000 L0,500 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .hero-feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        /* Banner with Image */
+        .banner-section {
+            padding: 80px 20px;
+            background: var(--gray-light);
+        }
+
+        .banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            color: var(--white);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .banner-text h2 {
+            font-size: 36px;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+        }
+
+        .banner-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            color: var(--dark-blue);
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0,102,204,0.2);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark-blue);
+        }
+
+        .service-card p {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Main Information Section */
+        .info-section {
+            padding: 80px 20px;
+            background: var(--gray-light);
+        }
+
+        .info-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+
+        .info-text {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .info-text h2 {
+            font-size: 32px;
+            color: var(--dark-blue);
+            margin-bottom: 25px;
+        }
+
+        .info-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .info-image {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            border-radius: 15px;
+            height: 100%;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: var(--white);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .reviews-slider {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .review-photo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: var(--white);
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .review-author {
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-content h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            border-color: var(--white);
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 18px;
+            background: var(--accent-color);
+            color: var(--white);
+            border: 2px solid var(--accent-color);
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-button:hover {
+            background: transparent;
+            border-color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 50px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .banner-content {
+                grid-template-columns: 1fr;
+            }
+
+            .info-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+82XXXXXXXXXX">📞 +82 XX XXX XXXX</a>
+                <a href="mailto:info@medkorea.ru">✉️ info@medkorea.ru</a>
+            </div>
+            <div>Работаем 24/7</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Med<span>Korea</span></a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#main">Главная</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">Оставить заявку</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="main">
+        <div class="hero-content">
+            <h1>Медицинский туризм в Южную Корею</h1>
+            <p>Организуем лечение в лучших клиниках Кореи с полным сопровождением от А до Я</p>
+            <a href="#contact" class="cta-button">Бесплатная консультация</a>
+            
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">🏥</div>
+                    <div>
+                        <strong>70+ клиник</strong><br>
+                        Партнеры по всей Корее
+                    </div>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">⭐</div>
+                    <div>
+                        <strong>1200+ пациентов</strong><br>
+                        Ежегодно доверяют нам
+                    </div>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">💰</div>
+                    <div>
+                        <strong>0% комиссии</strong><br>
+                        Наши услуги бесплатны
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="banner-content">
+            <div class="banner-image">🇰🇷</div>
+            <div class="banner-text">
+                <h2>Почему выбирают Южную Корею?</h2>
+                <p>✓ Передовые медицинские технологии мирового уровня</p>
+                <p>✓ Врачи с международным опытом и сертификацией</p>
+                <p>✓ Доступные цены по сравнению с США и Европой</p>
+                <p>✓ Минимальные сроки ожидания лечения</p>
+                <p>✓ Комфортные условия и высокий сервис</p>
+                <a href="#contact" class="cta-button" style="margin-top: 20px; display: inline-block;">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <h2 class="section-title">Наши услуги</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3>Подбор клиники и врача</h3>
+                <p>Подберем лучшую клинику и специалиста под ваш случай</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🗣️</div>
+                <h3>Медицинский перевод</h3>
+                <p>Профессиональный перевод на всех этапах лечения</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚗</div>
+                <h3>Трансфер и проживание</h3>
+                <p>Организация транспорта и комфортного размещения</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Онлайн консультации</h3>
+                <p>Консультации с корейскими врачами онлайн</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📄</div>
+                <h3>Перевод документов</h3>
+                <p>Подготовка и перевод медицинской документации</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎫</div>
+                <h3>Визовая поддержка</h3>
+                <p>Помощь в оформлении визы и документов</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💊</div>
+                <h3>Отправка лекарств</h3>
+                <p>Доставка препаратов из Кореи в Россию</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌏</div>
+                <h3>Экскурсии и туризм</h3>
+                <p>Организация досуга и знакомства с Кореей</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Information -->
+    <section class="info-section" id="about">
+        <div class="info-content">
+            <div class="info-text">
+                <h2>Основная информация</h2>
+                <p><strong>Лечение мирового уровня</strong></p>
+                <p>Южная Корея занимает лидирующие позиции в мировой медицине. Клиники оснащены новейшим оборудованием, а врачи регулярно проходят стажировки в ведущих медицинских центрах мира.</p>
+                
+                <p><strong>Специализации</strong></p>
+                <p>Мы организуем лечение по всем направлениям: онкология, кардиология, ортопедия, нейрохирургия, пластическая хирургия, гинекология, урология, офтальмология и многое другое.</p>
+                
+                <p><strong>Полное сопровождение</strong></p>
+                <p>От первого обращения до возвращения домой мы будем рядом. Наши координаторы помогут на каждом этапе: от выбора клиники до организации трансфера и переводчика.</p>
+                
+                <p><strong>Прозрачность и честность</strong></p>
+                <p>Мы работаем без скрытых комиссий. Все расходы обсуждаются заранее, вы платите только клинике за лечение.</p>
+            </div>
+            <div class="info-image">🏥</div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <h2 class="section-title">Отзывы наших пациентов</h2>
+        <div class="reviews-slider">
+            <div class="review-card">
+                <div class="review-photo">👨</div>
+                <p class="review-text">"Прошел лечение рака в клинике Samsung. Благодаря команде MedKorea все прошло гладко. Врачи поставили правильный диагноз, который отличался от российского. Сейчас на ремиссии уже год!"</p>
+                <p class="review-author">Дмитрий, 52 года<br>Москва</p>
+            </div>
+            <div class="review-card">
+                <div class="review-photo">👩</div>
+                <p class="review-text">"Делала пластику в Сеуле. Результат превзошел все ожидания! Координаторы были на связи 24/7, помогли с переводом, гостиницей, даже показали город. Очень благодарна!"</p>
+                <p class="review-author">Анна, 35 лет<br>Санкт-Петербург</p>
+            </div>
+            <div class="review-card">
+                <div class="review-photo">👨</div>
+                <p class="review-text">"Операция на позвоночнике прошла успешно. В России предлагали более травматичный метод. В Корее использовали малоинвазивную технологию. Восстановился за 2 недели!"</p>
+                <p class="review-author">Сергей, 47 лет<br>Новосибирск</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section" id="contact">
+        <div class="contact-content">
+            <h2>Оставить заявку</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="family">Фамилия</label>
+                    <input type="text" id="family" placeholder="Ваша фамилия" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="your@email.com" required>
+                </div>
+                <button type="submit" class="submit-button">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Главная</h3>
+                <a href="#main">О компании</a>
+                <a href="#services">Услуги</a>
+                <a href="#reviews">Отзывы</a>
+            </div>
+            <div class="footer-section">
+                <h3>Услуги</h3>
+                <a href="#">Онкология</a>
+                <a href="#">Кардиология</a>
+                <a href="#">Ортопедия</a>
+                <a href="#">Пластическая хирургия</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>📞 +82 XX XXX XXXX</p>
+                <p>✉️ info@medkorea.ru</p>
+                <p>📍 Сеул, Южная Корея</p>
+                <p>📍 Москва, Россия</p>
+            </div>
+            <div class="footer-section">
+                <h3>Подвал сайта</h3>
+                <p>Главная<br>Услуги<br>Контакты</p>
+                <p style="margin-top: 20px;">2025г<br>ИП Иванов</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Политика конфиденциальности | Пользовательское соглашение</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu if open
+                    const menu = document.getElementById('menu');
+                    menu.classList.remove('active');
+                }
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
