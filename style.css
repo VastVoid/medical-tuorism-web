@@ -527,6 +527,74 @@ nav a:hover::after {
     border-color: var(--white);
 }
 
+/* Consent Checkbox */
+.form-group--checkbox {
+    margin-bottom: 20px;
+}
+
+.checkbox-label {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-custom {
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: rgba(255,255,255,0.1);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+    content: '✓';
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.checkbox-label input[type="checkbox"]:focus + .checkbox-custom {
+    outline: 2px solid rgba(255,255,255,0.6);
+    outline-offset: 2px;
+}
+
+.checkbox-text {
+    font-size: 15px;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.4;
+}
+
+.consent-link {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.consent-link:hover {
+    opacity: 0.8;
+}
+
 .submit-button {
     width: 100%;
     padding: 18px;
