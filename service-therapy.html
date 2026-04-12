@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Терапия и другие направления | MedDream</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+82XXXXXXXXXX">📞 +82 XX XXX XXXX</a>
+                <a href="mailto:info@medkorea.ru">✉️ info@medkorea.ru</a>
+            </div>
+            <div>Работаем 24/7</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo"><img src="images/logo.jpeg" alt="MedKorea"></a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html#main">Главная</a></li>
+                    <li><a href="index.html#services">Услуги</a></li>
+                    <li><a href="index.html#about">О нас</a></li>
+                    <li><a href="tourism.html">Туризм</a></li>
+                    <li><a href="index.html#reviews">Отзывы</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contact" class="cta-button">Оставить заявку</a>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="index.html">Главная</a>
+            <span>›</span>
+            <a href="index.html#services">Направления лечения</a>
+            <span>›</span>
+            <span>Терапия и другие направления</span>
+        </div>
+    </div>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <div class="service-hero-text">
+                <div class="service-badge">💊 Терапия</div>
+                <h1>Лечение по индивидуальному запросу в Пусане</h1>
+                <p>Расскажите о вашей ситуации — мы подберём специалиста и клинику. Любое медицинское направление: гастроэнтерология, эндокринология, урология, гинекология, дерматология и другие.</p>
+                <div class="service-hero-actions">
+                    <a href="index.html#contact" class="cta-button">Получить консультацию</a>
+                </div>
+            </div>
+            <div class="service-hero-image">
+                <img src="images/therapy.jpg" alt="Терапия в Корее" onerror="this.parentElement.classList.add('image-placeholder')">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <div class="service-details-inner">
+
+            <!-- What We Offer -->
+            <div class="service-block">
+                <h2>Направления лечения</h2>
+                <div class="service-list">
+                    <div class="service-list-item">
+                        <div class="list-icon">🫁</div>
+                        <div>
+                            <strong>Гастроэнтерология</strong>
+                            <p>Лечение заболеваний ЖКТ: гастрит, язва, гепатит, панкреатит, колит, эндоскопическая диагностика</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <div class="list-icon">🧪</div>
+                        <div>
+                            <strong>Эндокринология</strong>
+                            <p>Диабет, заболевания щитовидной железы, гормональные нарушения — диагностика и лечение</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <div class="list-icon">🫘</div>
+                        <div>
+                            <strong>Урология</strong>
+                            <p>Лечение заболеваний почек, мочевого пузыря, предстательной железы. Малоинвазивные операции</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <div class="list-icon">👩</div>
+                        <div>
+                            <strong>Гинекология</strong>
+                            <p>Диагностика и лечение гинекологических заболеваний, ЭКО, ведение беременности</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <div class="list-icon">🧴</div>
+                        <div>
+                            <strong>Дерматология</strong>
+                            <p>Лечение кожных заболеваний, удаление новообразований, косметологические процедуры</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <div class="list-icon">🔬</div>
+                        <div>
+                            <strong>Другие специальности</strong>
+                            <p>Пульмонология, нефрология, ревматология, гематология и другие — подберём клинику под ваш запрос</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How It Works -->
+            <div class="service-block">
+                <h2>Как это работает</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Обращение</h3>
+                        <p>Оставляете заявку, рассказываете о вашей ситуации. Описываете диагноз или симптомы, прикладываете документы.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Подбор специалиста</h3>
+                        <p>Анализируем ваш случай, подбираем профильного врача и клинику. Согласовываем предварительную консультацию.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Подготовка</h3>
+                        <p>Помогаем с документами, организуем перевод медицинских записей, согласовываем дату визита.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Лечение</h3>
+                        <p>Встречаем в аэропорту, сопровождаем на всех приёмах. Перевод на каждом этапе лечения.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Korea -->
+            <div class="service-block service-block-accent">
+                <h2>Почему лечение в Корее?</h2>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Корейская медицина — мировой уровень. Врачи проходят стажировки в ведущих клиниках мира</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Доступ к препаратам и методикам, которые ещё не зарегистрированы в России</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Точная диагностика — оборудование последнего поколения, комплексные обследования</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Индивидуальный подход — каждый случай рассматривается отдельно, без шаблонных решений</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Прозрачная оплата — фиксированная стоимость лечения напрямую клинике, без скрытых комиссий</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Русскоязычное сопровождение — от прилёта до возвращения домой, перевод на каждом приёме</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <div class="service-cta-inner">
+            <h2>Расскажите о вашем случае</h2>
+            <p>Оставьте заявку — мы подберём клинику и врача под ваш запрос. Консультация бесплатна.</p>
+            <a href="index.html#contact" class="cta-button">Оставить заявку</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Главная</h3>
+                <a href="index.html#main">О компании</a>
+                <a href="index.html#services">Услуги</a>
+                <a href="index.html#reviews">Отзывы</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>📞 +82 XX XXX XXXX</p>
+                <p>✉️ info@medkorea.ru</p>
+                <p>📍 Пусан, Южная Корея</p>
+                <p>📍 Москва, Россия</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025г</p>
+            <p>Политика конфиденциальности | Пользовательское соглашение</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
