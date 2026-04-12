@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кардиология в Корее | MedDream</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+82XXXXXXXXXX">📞 +82 XX XXX XXXX</a>
+                <a href="mailto:info@medkorea.ru">✉️ info@medkorea.ru</a>
+            </div>
+            <div>Работаем 24/7</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo"><img src="images/logo.jpeg" alt="MedKorea"></a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html#main">Главная</a></li>
+                    <li><a href="index.html#services">Услуги</a></li>
+                    <li><a href="index.html#about">О нас</a></li>
+                    <li><a href="tourism.html">Туризм</a></li>
+                    <li><a href="index.html#reviews">Отзывы</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contact" class="cta-button">Оставить заявку</a>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="index.html">Главная</a>
+            <span>›</span>
+            <a href="index.html#services">Направления лечения</a>
+            <span>›</span>
+            <span>Кардиология</span>
+        </div>
+    </div>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <div class="service-hero-text">
+                <div class="service-badge">❤️ Кардиология</div>
+                <h1>Лечение сердечно-сосудистых заболеваний в Пусане</h1>
+                <p>Диагностика и лечение заболеваний сердечно-сосудистой системы в ведущих клиниках Южной Кореи. Малоинвазивные операции, стентирование, шунтирование и комплексная реабилитация.</p>
+                <div class="service-hero-actions">
+                    <a href="index.html#contact" class="cta-button">Получить консультацию</a>
+                </div>
+            </div>
+            <div class="service-hero-image">
+                <img src="images/cardiology.jpg" alt="Кардиология в Корее" onerror="this.parentElement.classList.add('image-placeholder')">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <div class="service-details-inner">
+
+            <!-- What We Offer -->
+            <div class="service-block">
+                <h2>Что мы организуем</h2>
+                <div class="service-list">
+                    <div class="service-list-item">
+                        <div class="list-icon">🔍</div>
+                        <div>
+                            <strong>Кардиодиагностика</strong>
+                            <p>ЭКГ, ЭхоКГ, нагрузочные тесты, коронарная ангиография, КТ-коронарография, холтеровское мониторирование</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <div class="list-icon">💉</div>
+                        <div>
+                            <strong>Стентирование</strong>
+                            <p>Малоинвазивная операция по восстановлению проходимости сосудов с установкой стентов нового поколения</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <div class="list-icon">🫀</div>
+                        <div>
+                            <strong>Шунтирование</strong>
+                            <p>Аортокоронарное шунтирование (АКШ) — создание обходного кровотока при множественных поражениях сосудов</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <div class="list-icon">⚡</div>
+                        <div>
+                            <strong>Лечение аритмий</strong>
+                            <p>Радиочастотная абляция, установка кардиостимуляторов и дефибрилляторов</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <div class="list-icon">🔄</div>
+                        <div>
+                            <strong>Второе мнение</strong>
+                            <p>Пересмотр диагноза и плана лечения ведущими корейскими кардиологами и кардиохирургами</p>
+                        </div>
+                    </div>
+                    <div class="service-list-item">
+                        <div class="list-icon">🏥</div>
+                        <div>
+                            <strong>Реабилитация</strong>
+                            <p>Кардиореабилитация после операций и инфарктов — индивидуальные программы восстановления</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How It Works -->
+            <div class="service-block">
+                <h2>Как это работает</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Обращение</h3>
+                        <p>Оставляете заявку, рассказываете о диагнозе. Прикладываете результаты обследований, если есть.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Подбор клиники</h3>
+                        <p>Подбираем кардиологический центр и врача под ваш случай. Согласовываем предварительную консультацию.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Подготовка</h3>
+                        <p>Помогаем с документами, организуем перевод медицинских записей, согласовываем дату визита.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Лечение</h3>
+                        <p>Встречаем в аэропорту, сопровождаем на всех приёмах. Перевод на каждом этапе лечения.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Korea -->
+            <div class="service-block service-block-accent">
+                <h2>Почему кардиология в Корее?</h2>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Корейские кардиохирурги выполняют тысячи операций ежегодно — высочайший уровень мастерства</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Малоинвазивные методики — быстрое восстановление, минимальные разрезы, короткий срок госпитализации</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Стенты и импланты последнего поколения — доступ к технологиям, которые ещё не зарегистрированы в России</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Комплексная кардиореабилитация — восстановление под наблюдением специалистов</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Прозрачная оплата — фиксированная стоимость лечения напрямую клинике, без скрытых комиссий</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-check">✓</span>
+                        <p>Русскоязычное сопровождение — от прилёта до возвращения домой, перевод на каждом приёме</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <div class="service-cta-inner">
+            <h2>Готовы обсудить ваш случай?</h2>
+            <p>Оставьте заявку — мы свяжемся с вами и поможем разобраться в следующих шагах. Консультация бесплатна.</p>
+            <a href="index.html#contact" class="cta-button">Оставить заявку</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Главная</h3>
+                <a href="index.html#main">О компании</a>
+                <a href="index.html#services">Услуги</a>
+                <a href="index.html#reviews">Отзывы</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>📞 +82 XX XXX XXXX</p>
+                <p>✉️ info@medkorea.ru</p>
+                <p>📍 Пусан, Южная Корея</p>
+                <p>📍 Москва, Россия</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025г</p>
+            <p>Политика конфиденциальности | Пользовательское соглашение</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
