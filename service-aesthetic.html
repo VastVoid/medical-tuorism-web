@@ -34,7 +34,7 @@
                     <li><a href="index.html#contact">Контакты</a></li>
                 </ul>
             </nav>
-            <a href="index.html#contact" class="cta-button">Оставить заявку</a>
+            <a href="#" class="cta-button" onclick="openModal(); return false;">Оставить заявку</a>
         </div>
     </header>
 
@@ -57,7 +57,7 @@
                 <h1>Косметология и омоложение в Пусане</h1>
                 <p>Косметологические процедуры, аппаратное омоложение, инъекционные методики и уходовые программы в ведущих клиниках Южной Кореи — мировом центре эстетической медицины.</p>
                 <div class="service-hero-actions">
-                    <a href="index.html#contact" class="cta-button">Получить консультацию</a>
+                    <a href="#" class="cta-button" onclick="openModal(); return false;">Получить консультацию</a>
                 </div>
             </div>
             <div class="service-hero-image">
@@ -185,7 +185,7 @@
         <div class="service-cta-inner">
             <h2>Хотите пройти процедуры в Корее?</h2>
             <p>Оставьте заявку — мы подберём клинику и организуем вашу поездку. Консультация бесплатна.</p>
-            <a href="index.html#contact" class="cta-button">Оставить заявку</a>
+            <a href="#" class="cta-button" onclick="openModal(); return false;">Оставить заявку</a>
         </div>
     </section>
 
@@ -212,11 +212,62 @@
         </div>
     </footer>
 
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2>Оставить заявку</h2>
+            <form id="modalForm">
+                <div class="form-group">
+                    <label for="modal-name">Имя</label>
+                    <input type="text" id="modal-name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-family">Фамилия</label>
+                    <input type="text" id="modal-family" placeholder="Ваша фамилия" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-phone">Телефон</label>
+                    <input type="tel" id="modal-phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">E-mail</label>
+                    <input type="email" id="modal-email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group form-group--checkbox">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="modal-consent" required>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Я согласен(а) на <a href="#" class="consent-link">обработку персональных данных</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="submit-button">Отправить</button>
+            </form>
+        </div>
+    </div>
+
     <script>
         function toggleMenu() {
             const menu = document.getElementById('menu');
             menu.classList.toggle('active');
         }
+
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('modalForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+            closeModal();
+        });
     </script>
 </body>
 </html>
