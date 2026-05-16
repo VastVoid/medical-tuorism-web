@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог о медицинском туризме | MedDream</title>
+    <meta name="description" content="Полезные статьи о медицинском туризме в Южной Корее, лечении в Пусане, подготовке к поездке и восстановлении после процедур.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service.css">
+
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+82XXXXXXXXXX">📞 +82 XX XXX XXXX</a>
+                <a href="mailto:info@medkorea.ru">✉️ info@medkorea.ru</a>
+            </div>
+            <div>Работаем 24/7</div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo"><img src="images/logo.jpeg" alt="MedKorea"></a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html#main">Главная</a></li>
+                    <li><a href="index.html#services">Услуги</a></li>
+                    <li><a href="index.html#about">О нас</a></li>
+                    <li><a href="tourism.html">Туризм</a></li>
+                    <li><a href="blog.html" class="active">Блог</a></li>
+                    <li><a href="index.html#reviews">Отзывы</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button" onclick="openModal(); return false;">Оставить заявку</a>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="index.html">Главная</a>
+            <span>›</span>
+            <span>Блог</span>
+        </div>
+    </div>
+
+    <section class="blog-hero">
+        <div class="blog-hero-content">
+            <h1>Блог о медицинском туризме</h1>
+            <p>Полезные статьи о лечении в Южной Корее, подготовке к поездке, особенностях корейской медицины и восстановлении после процедур.</p>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-container">
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <a href="blog/podgotovka-k-poezdke.html" class="blog-card-image">
+                        📋
+                    </a>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">Подготовка к поездке</span>
+                        <h3><a href="blog/podgotovka-k-poezdke.html" class="blog-card-title-link">Как подготовиться к поездке на лечение в Южную Корею</a></h3>
+                        <p>Пошаговое руководство: от выбора клиники до возвращения домой. Список необходимых документов, советы по планированию бюджета и организации поездки.</p>
+                        <div class="blog-card-footer">
+                            <time class="blog-card-date" datetime="2026-05-09">9 мая 2026</time>
+                            <a href="blog/podgotovka-k-poezdke.html" class="blog-card-link">Читать далее →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-badge">Скоро</span>
+                        🔬
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">Диагностика</span>
+                        <h3>Комплексная диагностика в Корее: что входит и кому подходит</h3>
+                        <p>Разбор программ check-up в корейских клиниках: какие обследования включены, сколько времени занимает прохождение и как интерпретировать результаты.</p>
+                        <div class="blog-card-footer">
+                            <time class="blog-card-date" datetime="2026-05-09">9 мая 2026</time>
+                            <a href="#" class="blog-card-link">Читать далее →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-badge">Скоро</span>
+                        🤝
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">Сопровождение</span>
+                        <h3>Русскоязычное сопровождение: как мы заботимся о пациентах</h3>
+                        <p>Рассказываем о полном цикле поддержки: от первой консультации до возвращения домой. Перевод, трансфер, координация с клиникой.</p>
+                        <div class="blog-card-footer">
+                            <time class="blog-card-date" datetime="2026-05-09">9 мая 2026</time>
+                            <a href="#" class="blog-card-link">Читать далее →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-badge">Скоро</span>
+                        🏙️
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">Выбор города</span>
+                        <h3>Пусан или Сеул: какой город выбрать для лечения</h3>
+                        <p>Сравнение двух крупнейших медицинских центров Южной Кореи: преимущества Пусана, особенности столичных клиник и как сделать правильный выбор.</p>
+                        <div class="blog-card-footer">
+                            <time class="blog-card-date" datetime="2026-05-09">9 мая 2026</time>
+                            <a href="#" class="blog-card-link">Читать далее →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-badge">Скоро</span>
+                        💪
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">Реабилитация</span>
+                        <h3>Восстановление после операции в Корее: советы и рекомендации</h3>
+                        <p>Как проходит послеоперационный период в корейских клиниках: особенности ухода, реабилитационные программы и поддержка на всех этапах восстановления.</p>
+                        <div class="blog-card-footer">
+                            <time class="blog-card-date" datetime="2026-05-09">9 мая 2026</time>
+                            <a href="#" class="blog-card-link">Читать далее →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <span class="blog-card-badge">Скоро</span>
+                        🏆
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">О Корее</span>
+                        <h3>Почему корейская медицина считается одной из лучших в мире</h3>
+                        <p>Обзор системы здравоохранения Южной Кореи: технологии, квалификация врачей, международные рейтинги и инновационные методы лечения.</p>
+                        <div class="blog-card-footer">
+                            <time class="blog-card-date" datetime="2026-05-09">9 мая 2026</time>
+                            <a href="#" class="blog-card-link">Читать далее →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-cta">
+        <div class="service-cta-inner">
+            <h2>Хотите узнать больше?</h2>
+            <p>Оставьте заявку — мы свяжемся с вами и ответим на все вопросы. Консультация бесплатна.</p>
+            <a href="#" class="cta-button" onclick="openModal(); return false;">Оставить заявку</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Главная</h3>
+                <a href="index.html#main">О компании</a>
+                <a href="index.html#services">Услуги</a>
+                <a href="index.html#reviews">Отзывы</a>
+                <a href="blog.html">Блог</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>📞 +82 XX XXX XXXX</p>
+                <p>✉️ info@medkorea.ru</p>
+                <p>📍 Пусан, Южная Корея</p>
+                <p>📍 Москва, Россия</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025г</p>
+            <p>Политика конфиденциальности | Пользовательское соглашение</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2>Оставить заявку</h2>
+            <form id="modalForm">
+                <div class="form-group">
+                    <label for="modal-name">Имя</label>
+                    <input type="text" id="modal-name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-family">Фамилия</label>
+                    <input type="text" id="modal-family" placeholder="Ваша фамилия" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-phone">Телефон</label>
+                    <input type="tel" id="modal-phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">E-mail</label>
+                    <input type="email" id="modal-email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group form-group--checkbox">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="modal-consent" required>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Я согласен(а) на <a href="#" class="consent-link">обработку персональных данных</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="submit-button">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('modalForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+            closeModal();
+        });
+    </script>
+</body>
+</html>
